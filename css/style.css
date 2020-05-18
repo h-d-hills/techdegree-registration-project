@@ -1,0 +1,49 @@
+header {
+    text-align: center;
+}
+
+.secondary-header,
+main {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.main-header {
+    background-color: #2d3945;
+    color: white;
+    width: 100%;
+    padding: 21.44px 0;
+    font-size: 1.25em;
+}
+
+.secondary-header {
+    color: #2d3945;
+    border-bottom: #2d3945 10px solid;
+}
+
+.secondary-header h2 {
+    font-weight: lighter;
+}
+
+.line {
+    margin: 5px auto;
+    width: 90%;
+    height: 5px;
+    background-color: #2d3945;
+    align-self: center;
+}
+
+fieldset {
+    border: none;
+}
+
+footer {
+    text-align: center;
+}
+
+button {
+    background-color: #4ebbb5;
+    color: #fff;
+    border: none;
+    
+}

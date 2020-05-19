@@ -13,7 +13,6 @@ h1 {
 
 label,
 h3 {
-    color: rgba(0,0,0,.75);
     font-weight: normal;
 }
 
@@ -44,10 +43,6 @@ main {
     border-bottom: #2d3945 10px solid;
 }
 
-.secondary-header h2 {
-    font-weight: 10;
-}
-
 .first-line {
     width: 90%;
     max-width: 768px;
@@ -64,6 +59,8 @@ main {
     border: none;
     margin: 0;
     padding: 0;
+    background-color: #eee;
+    border: 1px solid black;
 }
 
 .contact-field {
@@ -95,9 +92,13 @@ input[type="text"]:focus,
 input[type="number"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
     background-color: #fff;
     border: 1px solid #000;
+    outline: none;
+    box-shadow: 0 0 6pt #00f;
+    transition-duration:.5s ;
 }
 
 input[name="user_zip"] {
@@ -109,16 +110,6 @@ input::placeholder {
     font-style: italic;
     font-size: .8em;
     padding-right: 1em;
-}
-
-input[type="text"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-textarea:focus,
-select:focus {
-    outline: none;
-    box-shadow: 0 0 6pt #00f;
 }
 
 select:active,

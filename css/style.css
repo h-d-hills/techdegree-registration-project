@@ -1,11 +1,34 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Merriweather', Arial, Helvetica, sans-serif;
+}
+
 header {
     text-align: center;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+label,
+h3 {
+    color: rgba(0,0,0,.75);
+    font-weight: normal;
+}
+
+.field-title {
+    font-weight: bold;
+    font-size: 2em;
+    line-height: 3;
+    color: #2d3945;
 }
 
 .secondary-header,
 main {
     margin: 0 auto;
     width: 90%;
+    max-width: 768px;
 }
 
 .main-header {
@@ -13,7 +36,7 @@ main {
     color: white;
     width: 100%;
     padding: 21.44px 0;
-    font-size: 1.25em;
+    font-size: 1.2em;
 }
 
 .secondary-header {
@@ -22,28 +45,159 @@ main {
 }
 
 .secondary-header h2 {
-    font-weight: lighter;
+    font-weight: 10;
+}
+
+.first-line {
+    width: 90%;
+    max-width: 768px;
 }
 
 .line {
     margin: 5px auto;
-    width: 90%;
     height: 5px;
     background-color: #2d3945;
     align-self: center;
 }
 
-fieldset {
+.field {
     border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-field {
+    display: flex;
+}
+
+.contact-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-input,
+select,
+label {
+    width: 100%;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+.state-input {
+    margin: .75em 0;
+    height: 3.5em;
+    padding: 1em;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+input[name="user_zip"] {
+    width: 50%;
+}
+
+input::placeholder {
+    text-align: right;
+    font-style: italic;
+    font-size: .8em;
+    padding-right: 1em;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 0 6pt #00f;
+}
+
+select:active,
+select:focus {
+    background-color: #fff;
+}
+
+option[disabled]{
+    font-style: italic;
+}
+
+textarea {
+    height: 7em;
+    width: 100%;
+    padding: 1em;
+}
+
+textarea,
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+select {
+    border: none;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #4ebbb5;
+    color: #fff;
+    border: none;    
+    width: 100%;
+    height: 3em;
+    font-size: 1.5em;
+    margin: 1em 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.news-field label {
+    line-height: 2em;
+}
+
+label[for="complaints"] {
+    font-size: larger;
+    line-height: 3;
 }
 
 footer {
     text-align: center;
 }
 
-button {
-    background-color: #4ebbb5;
-    color: #fff;
-    border: none;
-    
+footer p {
+    font-weight: lighter;
+}
+
+@media (min-width: 768px) {
+    .contact-field {
+        display: block;
+    }
+
+    .contact-div input,
+    .contact-div select {
+        width: 200%;
+    }
+
+    .contact-div label {
+        margin: auto 0;
+    }
+
+    .contact-div input[type="number"] {
+        width: 100%;
+        margin-right: 33%;
+    }
+
+    .contact-div {
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+    }
 }
